@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repaso Js</title>
+</head>
+<Body>
+    <h1> Promedio de Calificaciones</h1>  
+    <input type="button" value="1. Ejecutar código promedio de dos números" onclick="promedio"> 
+	<form id="form-calificaciones">
+		<label for="calificacionA">Calificación A:</label>
+		<input type="number" id="calificacionA" required>
+		<label for="calificacionB">Calificación B:</label>
+		<input type="number" id="calificacionB" required>
+		<button type="button" onclick="calcularPromedio()">Calcular Promedio</button>
+	</form>
+	<h2 id="resultado"></h2> 
+    <script>
+		function calcularPromedio() {
+			let A = document.getElementById("calificacionA").value;
+			let B = document.getElementById("calificacionB").value;
+			let promedio = (A + B) / 2;
+			document.getElementById("resultado").innerHTML = "El promedio es: " + promedio;
+		}
+	</script>
+    <script src="./js/01.js"></script>
+</Body>
+</html>
